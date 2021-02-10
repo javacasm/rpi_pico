@@ -12,3 +12,4 @@ ids=ds.scan()
 ds.convert_temp()
 
 ds.read_temp(ids[0])
+# CRC Error.... :( 

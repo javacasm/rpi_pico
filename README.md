@@ -2,6 +2,11 @@
 
 ![](https://hackster.imgix.net/uploads/attachments/1245773/image_LfCycx2KZO.png)
 
+Raspberry Pi Pico, un microcontrolador de la fundación  Raspberry Pi. Tiene 2 cores Arm Cortex M0+ que se ejecutan hasta los 133MHz, con 264KB of RAM y  2Mb de almacenamiento flash y sólo cuesta 4$.
+
+
+
+
 ## Pines/Pinout
 
 ![](https://hackster.imgix.net/uploads/attachments/1245776/image_43wr6uY0Wn.png)
@@ -10,11 +15,17 @@
 
 [Módulo de frintzing](https://datasheets.raspberrypi.org/pico/Pico-R3-Fritzing.fzpz) y [esquema](https://datasheets.raspberrypi.org/pico/Pico-R3-A4-Pinout.pdf) de la [página de raspberry.org](https://www.raspberrypi.org/documentation/pico/getting-started/)
 
-Raspberry Pi Pico, a new microcontroller board from Raspberry Pi. It's got two Arm Cortex M0+ cores running at up to 133MHz, 264KB of RAM, 2Mb
+
 
 [Detalles en hackter.io](https://www.hackster.io/news/hands-on-with-the-rp2040-and-pico-the-first-in-house-silicon-and-microcontroller-from-raspberry-pi-effc452fc25d)
 
+#### Uso micropython
+
 [Guía para usarla con micropython](https://www.raspberrypi.org/documentation/pico/getting-started/)
+
+#### Uso C/C++
+
+[Programación en C](rptl.io/rp2040)
 
 [Guía para uasrla con C++](https://datasheets.raspberrypi.org/pico/getting_started_with_pico.pdf)
 
@@ -24,9 +35,23 @@ Diagrama de bloques
 
 ![](https://blog.bricogeek.com/img_cms/3417-raspberry-pi-pico-diagrama-bloques-microcontrolador.jpg)
 
+
+
+#### Pronto nuevas placas con RP2040
+
 [Adafruit To Add 'Pi Silicon' To Their Boards](https://www.tomshardware.com/news/adafruit-rp2040)
 
 [Arduino To Release Board Based on Raspberry Pi Silicon](https://www.tomshardware.com/news/arduino-rp2040)
+
+[Arduino Announces Raspberry Pi RP2040 Core Port, Arduino Nano RP2040 Connect Board](https://www.hackster.io/news/arduino-announces-raspberry-pi-rp2040-core-port-arduino-nano-rp2040-connect-board-615085ce4791)
+
+### Ejemplo: BME280 + LCD I2C
+
+![](./images/BME280_lcd_bb.png)
+
+#### Tutoriales
+
+[Comparativa RPi Pico/ESP32](https://www.youtube.com/watch?v=cVHCllbN3bQ)
 
 [Raspberry Pi Pico: Tutorials, Pinout, Everything You Need to Know](https://www.tomshardware.com/news/raspberry-pi-pico-tutorials-pinout-everything-you-need-to-know)
 
@@ -38,7 +63,6 @@ Diagrama de bloques
 
 [Flashing lights with MicroPython and Programmable I/O part 2](https://hackspace.raspberrypi.org/articles/flashing-lights-with-micropython-and-programmable-i-o-part-2)
 
-[Arduino Announces Raspberry Pi RP2040 Core Port, Arduino Nano RP2040 Connect Board](https://www.hackster.io/news/arduino-announces-raspberry-pi-rp2040-core-port-arduino-nano-rp2040-connect-board-615085ce4791)
 
 [Raspberry Pi Pico microcontroller: specifications, features and RP2040](https://magpi.raspberrypi.org/articles/raspberry-pi-pico-microcontroller-specifications-features-and-rp2040)
 
