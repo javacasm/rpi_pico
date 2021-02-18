@@ -17,9 +17,10 @@ En cualquier caso me parece una apuesta muy valiente de la Fundación Raspberry 
 * 2 UARTs
 * 2 SPI
 
-![](https://hackster.imgix.net/uploads/attachments/1245776/image_43wr6uY0Wn.png)
-
+![](./images/raspiPico-pinout.png)
+Imagen de Hackter.io
 ![](./images/Pico-R3-Pinout.svg)
+Imagen de RaspberryPi.org
 
 Puedes usar el [módulo de frintzing de la Raspi Pico](https://datasheets.raspberrypi.org/pico/Pico-R3-Fritzing.fzpz) y [su esquema](https://datasheets.raspberrypi.org/pico/Pico-R3-A4-Pinout.pdf) de la [página de raspberry.org](https://www.raspberrypi.org/documentation/pico/getting-started/)
 
