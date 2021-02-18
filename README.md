@@ -48,7 +48,78 @@ En este vídeo vemos los primeros pasos
 
 [Vídeo: primeros pasos con Raspberry Pi Pico en micropython](https://youtu.be/ttwo53KDqII)
 
+### Ejemplo 2: Conectando neopixels
 
+Aprovechando los ejemplos de la guía "SDK para Python en Raspberry Pi Pico" vamos a ver cómo usar neopixels con la Raspberry Pi Pico en micropython.
+
+Vemos que en el código aparece una pequeña parte en ensamblador, es un ejemplo de cómo se pueden usar los PIO (Programable I/O) para hacer que un pin determinado (el 22 en este caso) para crear una máquina de estados que se comunique con un dispsitivo usando un protocolo, el de los neopixels
+
+```python
+# Example using PIO to drive a set of WS2812 LEDs.
+
+import array, time
+from machine import Pin
+import rp2
+
+# Configure the number of WS2812 LEDs.
+NUM_LEDS = 16
+
+
+@rp2.asm_pio(sideset_init=rp2.PIO.OUT_LOW, out_shiftdir=rp2.PIO.SHIFT_LEFT, autopull=True, pull_thresh=24)
+def ws2812():
+    T1 = 2
+    T2 = 5
+    T3 = 3
+    wrap_target()
+    label("bitloop")
+    out(x, 1)               .side(0)    [T3 - 1]
+    jmp(not_x, "do_zero")   .side(1)    [T1 - 1]
+    jmp("bitloop")          .side(1)    [T2 - 1]
+    label("do_zero")
+    nop()                   .side(0)    [T2 - 1]
+    wrap()
+
+
+# Create the StateMachine with the ws2812 program, outputting on Pin(22).
+sm = rp2.StateMachine(0, ws2812, freq=8_000_000, sideset_base=Pin(22))
+
+# Start the StateMachine, it will wait for data on its FIFO.
+sm.active(1)
+
+# Display a pattern on the LEDs via an array of LED RGB values.
+ar = array.array("I", [0 for _ in range(NUM_LEDS)])
+
+def test1():
+    # Cycle colours.
+    for i in range(4 * NUM_LEDS):
+        for j in range(NUM_LEDS):
+            r = j * 100 // (NUM_LEDS - 1)
+            b = 100 - j * 100 // (NUM_LEDS - 1)
+            if j != i % NUM_LEDS:
+                r >>= 3
+                b >>= 3
+            ar[j] = r << 16 | b
+        sm.put(ar, 8)
+        time.sleep_ms(50)
+
+def test2():
+    # Fade out.
+    for i in range(24):
+        for j in range(NUM_LEDS):
+            ar[j] >>= 1
+        sm.put(ar, 8)
+        time.sleep_ms(50)
+
+```
+
+
+[Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)
+
+
+
+### Ejemplo 3: BME280 + LCD I2C
+
+![](./images/BME280_lcd_bb.png)
 
 [Guía para usarla con micropython](https://www.raspberrypi.org/documentation/pico/getting-started/)
 
@@ -73,9 +144,7 @@ Diagrama de bloques
 
 [Arduino Announces Raspberry Pi RP2040 Core Port, Arduino Nano RP2040 Connect Board](https://www.hackster.io/news/arduino-announces-raspberry-pi-rp2040-core-port-arduino-nano-rp2040-connect-board-615085ce4791)
 
-### Ejemplo: BME280 + LCD I2C
 
-![](./images/BME280_lcd_bb.png)
 
 #### Tutoriales
 
