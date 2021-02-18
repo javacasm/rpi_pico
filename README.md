@@ -1,6 +1,7 @@
 ## Raspberry Pi Pico
 
 ![](./images/image_LfCycx2KZO.png)
+Imagen de Hackter.io
 
 Raspberry Pi Pico es un microcontrolador creado por la fundación Raspberry Pi. Tiene 2 cores Arm Cortex M0+ que se ejecutan hasta los 133MHz, con 264KB of RAM y  2Mb de almacenamiento flash y sólo cuesta 4$.
 
@@ -18,8 +19,11 @@ En cualquier caso me parece una apuesta muy valiente de la Fundación Raspberry 
 * 2 SPI
 
 ![](./images/raspiPico-pinout.png)
+
 Imagen de Hackter.io
+
 ![](./images/Pico-R3-Pinout.svg)
+
 Imagen de RaspberryPi.org
 
 Puedes usar el [módulo de frintzing de la Raspi Pico](https://datasheets.raspberrypi.org/pico/Pico-R3-Fritzing.fzpz) y [su esquema](https://datasheets.raspberrypi.org/pico/Pico-R3-A4-Pinout.pdf) de la [página de raspberry.org](https://www.raspberrypi.org/documentation/pico/getting-started/)
