@@ -1,6 +1,6 @@
 ## Raspberry Pi Pico
 
-![](https://hackster.imgix.net/uploads/attachments/1245773/image_LfCycx2KZO.png)
+![](./images/image_LfCycx2KZO.png)
 
 Raspberry Pi Pico es un microcontrolador creado por la fundación Raspberry Pi. Tiene 2 cores Arm Cortex M0+ que se ejecutan hasta los 133MHz, con 264KB of RAM y  2Mb de almacenamiento flash y sólo cuesta 4$.
 
