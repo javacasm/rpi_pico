@@ -134,9 +134,12 @@ while True:
 
 ### Ejemplo 2: Conectando neopixels
 
-Aprovechando los ejemplos de la guía "SDK para Python en Raspberry Pi Pico" vamos a ver cómo usar neopixels con la Raspberry Pi Pico en micropython.
+Aprovechando los ejemplos de la guía "SDK para Python en Raspberry Pi Pico" vamos a ver cómo usar neopixels con la Raspberry Pi Pico en micropython. Podemos descargar [el ejmplo del github de ejemplos de micropython para Raspberry Pi Pico](https://github.com/raspberrypi/pico-micropython-examples/blob/master/pio/pio_ws2812.py)
 
-Vemos que en el código aparece una pequeña parte en ensamblador, es un ejemplo de cómo se pueden usar los PIO (Programable I/O) para hacer que un pin determinado (el 22 en este caso) para crear una máquina de estados que se comunique con un dispsitivo usando un protocolo, el de los neopixels
+Vemos que en el código aparece una pequeña parte en ensamblador, es un ejemplo de cómo se pueden usar los PIO (Programable I/O) para hacer que un pin determinado (el 22 en este caso) para crear una máquina de estados que se comunique con un dispsitivo usando un protocolo, el de los neopixels. 
+
+He modificado levemente el fichero original añadiendo un par de funciones para agrupar el código.
+
 
 ```python
 # Example using PIO to drive a set of WS2812 LEDs.
@@ -196,9 +199,34 @@ def test2():
 
 ```
 
+Podemos encontrar [más ejemplos de uso de PIO del mismo repositorio](https://github.com/raspberrypi/pico-micropython-examples/tree/master/pio).
+
+Desde Thonny podemos abrir el fichero original que hemos descargado, lo modificamos y adaptamos.
+
+Al conectar desde Thonny con la Raspberry Pi Pico con el firmware de micropython, no sólo obtenemos una consola donde ejecutar codigo python en modo interactivo, conocida como REPL, sino que ademas podemos tenemos un explorador de archivos de la placa Raspberry, donde podremos subir y editar archivos. 
+
+![](./images/FicherosPCFicherosLocales.png)
+
+Arriba vemos los ficheros locales y abajo los de la Raspi Pico. Podemos enviar cualquier fichero a la Raspberry Pi Pico pulsando sobre el fichero local y haciendo clic con el botón derecho del ratón seleccionamos "Upload to"  
+
+![](./images/SubirFicheroRaspiPico.png)
+
+
+Podemos editar los ficheros tanto locales como los de la Raspi Pico que aparecen con el nombre entre corchetes
+
+![](./images/FicherosLocalesemotos.png)
+
+El montaje es muy sencillo, sólo hay que conectar el anillo led a GND y Vcc y el pin de control al pin 22
+
+![](https://github.com/raspberrypi/pico-micropython-examples/raw/master/pio/neopixel_ring/neopixel_ring.png)
+
+Ahora podemos ejecutar los test y veremos cómo se iluminan los leds
+
+
+![](./images/testNeopixel.png)
+
 
 [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)
-
 
 
 ### Ejemplo 3: BME280 + LCD I2C
