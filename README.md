@@ -234,9 +234,15 @@ Ahora podemos ejecutar los test y veremos cómo se iluminan los leds
 
 [Guía para usarla con micropython](https://www.raspberrypi.org/documentation/pico/getting-started/)
 
+### Ejemplos
+
+[Ejemplos: PWM, ADC, i2c, temperatura, etc...](https://github.com/raspberrypi/pico-micropython-examples)
+
 #### Uso C/C++
 
 [Programación en C](rptl.io/rp2040)
+
+[Ejemplos en C](https://github.com/raspberrypi/pico-examples)
 
 [Guía para uasrla con C++](https://datasheets.raspberrypi.org/pico/getting_started_with_pico.pdf)
 
