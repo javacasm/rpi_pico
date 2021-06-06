@@ -34,5 +34,5 @@
 [Flashing lights with MicroPython and Programmable I/O part 1](https://hackspace.raspberrypi.org/articles/pio1)
 
 [Flashing lights with MicroPython and Programmable I/O part 2](https://hackspace.raspberrypi.org/articles/flashing-lights-with-micropython-and-programmable-i-o-part-2)
-
+[Emulador de BBC Micro](https://www.youtube.com/watch?v=fObCwKfbRco)
 
