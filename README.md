@@ -225,6 +225,9 @@ Ahora podemos ejecutar los test y veremos cómo se iluminan los leds
 ![](./images/testNeopixel.png)
 
 
+[![Vídeo: Usando neopixels con Raspberry Pi Pico en micropython](https://img.youtube.com/vi/kFOTH7aQqh8/0.jpg)](https://youtu.be/kFOTH7aQqh8)
+
+
 [Raspberry Pi Pico Python SDK](https://datasheets.raspberrypi.org/pico/raspberry-pi-pico-python-sdk.pdf)
 
 
